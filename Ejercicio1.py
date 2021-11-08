@@ -42,3 +42,16 @@ class Libro(object):
 
     def getautor(self):
         return self.autor
+
+l = Libro()
+l.settitulo('Harry Potter y la piedra filosofal')
+l.setautor('J.K.Rowling')
+l.setnumpaginas(220)
+l.seteditor('Salamandra')
+l.setaño(2001)
+
+print(l.gettitulo)
+print(l.getautor)
+print(l.getnumpaginas)
+print(l.geteditor)
+print(l.getaño)
