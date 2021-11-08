@@ -20,10 +20,11 @@ class Libro(object):
         self.editor = editor
 
     def setnumpaginas(self,numpaginas):
-        self.numpaginas=numpaginas
+        self.numpaginas = numpaginas
 
-    def setanio(self,anio):
-        self.anio=anio
+    def setaño(self,año):
+        self.anio = año
 
-    def setanio(self,anio):
-        self.anio=anio
+    def setautor(self, autor):
+        self.autor = autor
+
