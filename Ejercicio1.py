@@ -28,3 +28,17 @@ class Libro(object):
     def setautor(self, autor):
         self.autor = autor
 
+    def gettitulo(self):
+        return self.titulo
+
+    def geteditor(self):
+        return self.editor
+
+    def getnumpaginas(self):
+        return self.numpaginas
+
+    def getaño(self):
+        return self.año
+
+    def getautor(self):
+        return self.autor
