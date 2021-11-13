@@ -54,3 +54,9 @@ class CuentaBancaria():
             dinero_final = (CuentaBancaria.getsaldo()) - int(dinero)
             CuentaBancaria.setsaldo(dinero_final)
 
+    #Método para ingresar dinero
+    def ingresar_dinero(self, dinero):
+        dinero_final = (CuentaBancaria.getsaldo()) + int(dinero)
+        CuentaBancaria.setsaldo(dinero_final)
+
+
