@@ -2,8 +2,8 @@ class Libro(object):
     def __init__(self):
         self.titulo = ""
         self.editor = ""
-        self.numpaginas = ""
-        self.año = ""
+        self.numpaginas = 0
+        self.año = 0
         self.autor = ""
 
     def libro(self, titulo, editor, numpaginas, año, autor):
