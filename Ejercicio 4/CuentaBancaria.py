@@ -59,4 +59,10 @@ class CuentaBancaria():
         dinero_final = (CuentaBancaria.getsaldo()) + int(dinero)
         CuentaBancaria.setsaldo(dinero_final)
 
-
+    #Método para transferir dinero
+    def transferir_dinero(self, dinero, cuenta):
+        if int(dinero) > CuentaBancaria.getsaldo():
+            print('No hay suficiente saldo para transferir')
+        else:
+            CuentaBancaria.retirar_dinero(dinero)
+            cuenta.ingresar_dinero(dinero)
