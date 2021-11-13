@@ -3,14 +3,14 @@ class Libro(object):
         self.titulo = ""
         self.editor = ""
         self.numpaginas = 0
-        self.año = 0
+        self.anio = 0
         self.autor = ""
 
-    def libro(self, titulo, editor, numpaginas, año, autor):
+    def libro(self, titulo, editor, numpaginas, anio, autor):
         self.titulo = titulo
         self.editor = editor
         self.numpaginas = numpaginas
-        self.año = año
+        self.anio = anio
         self.autor = autor
 
     def settitulo(self, titulo):
@@ -22,8 +22,8 @@ class Libro(object):
     def setnumpaginas(self,numpaginas):
         self.numpaginas = numpaginas
 
-    def setaño(self,año):
-        self.anio = año
+    def setanio(self,anio):
+        self.anio = anio
 
     def setautor(self, autor):
         self.autor = autor
@@ -37,8 +37,8 @@ class Libro(object):
     def getnumpaginas(self):
         return self.numpaginas
 
-    def getaño(self):
-        return self.año
+    def getanio(self):
+        return self.anio
 
     def getautor(self):
         return self.autor
@@ -48,10 +48,10 @@ l.settitulo('Harry Potter y la piedra filosofal')
 l.setautor('J.K.Rowling')
 l.setnumpaginas(220)
 l.seteditor('Salamandra')
-l.setaño(2001)
+l.setanio(2001)
 
-print(l.gettitulo)
-print(l.getautor)
-print(l.getnumpaginas)
-print(l.geteditor)
-print(l.getaño)
+print(l.gettitulo())
+print(l.getautor())
+print(l.getnumpaginas())
+print(l.geteditor())
+print(l.getanio())
