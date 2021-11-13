@@ -1,4 +1,4 @@
-class CuentaBancaria(object):
+class CuentaBancaria():
     def __init__(self):
         self.ID = ''
         self.titular = ''
@@ -45,3 +45,12 @@ class CuentaBancaria(object):
 
     def getsaldo(self):
         return self.saldo
+
+    #Método para retirar dinero
+    def retirar_dinero(self, dinero):
+        if int(dinero) > CuentaBancaria.getsaldo():
+            print('No hay suficiente dinero para retirar')
+        else:
+            dinero_final = (CuentaBancaria.getsaldo()) - int(dinero)
+            CuentaBancaria.setsaldo(dinero_final)
+
