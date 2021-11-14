@@ -47,5 +47,5 @@ if __name__ == '__main__':
     linked_list.insertar(Nodo(5))
     linked_list.insertar(Nodo(6))
     linked_list.insertar(Nodo(7))
-    ## printing the linked list
+    #printamos la lista
     linked_list.mostrar()
