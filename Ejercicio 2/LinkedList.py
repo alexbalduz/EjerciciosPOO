@@ -18,3 +18,17 @@ class LinkedList:
 			#cabecera esta vacía
 			#asignamos nodo a la cabecera
 			self.head = nodo_nuevo
+
+    def mostrar(self):
+    	#variable para iterar
+		temp_node = self.head
+
+		#iteramos hasta que llegamos al final de la lista
+		while temp_node != None:
+			#printamos el nodo data
+			print(temp_node.data, end='->')
+
+			#nos movemos al siguiente nodo
+			temp_node = temp_node.next
+
+		print('Null')
