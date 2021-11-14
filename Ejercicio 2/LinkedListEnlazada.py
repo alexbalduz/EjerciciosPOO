@@ -17,7 +17,7 @@ class LinkedList:
 			#asignamos el nuevo nodo al siguiente del ultimo nodo
 			last_node.next = nodo_nuevo
 
-    def display(self):
+    def mostrar(self):
 
 		#printamos la data en orden normal
 		print("Orden normal: ", end='')
