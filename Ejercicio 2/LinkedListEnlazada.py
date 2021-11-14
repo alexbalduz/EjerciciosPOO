@@ -16,3 +16,28 @@ class LinkedList:
 
 			#asignamos el nuevo nodo al siguiente del ultimo nodo
 			last_node.next = nodo_nuevo
+
+    def display(self):
+
+		#printamos la data en orden normal
+		print("Orden normal: ", end='')
+
+		temp_node = self.head
+		while temp_node != None:
+			print(temp_node.data, end=' ')
+			temp_node = temp_node.next
+		print()
+
+		#printamos la data en orden inverso
+		print("Reverse Order: ", end='')
+
+		#cogemos el ultimo nodo
+		last_node = self.head
+		while last_node.next != None:
+			last_node = last_node.next
+
+		temp_node = last_node
+		while temp_node != None:
+			print(temp_node.data, end=' ')
+			temp_node = temp_node.prev
+		print()
