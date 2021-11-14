@@ -1,13 +1,5 @@
 class CuentaBancaria():
-    def __init__(self):
-        self.ID = ''
-        self.titular = ''
-        self.fecha_apertura = ''
-        self.numero_cuenta = 0
-        self.saldo = 0
-
-    #Definimos constructor
-    def cuentaBancaria(self, ID, titular, fecha_apertura, numero_cuenta, saldo):
+    def __init__(self, ID, titular, fecha_apertura, numero_cuenta, saldo):
         self.ID = ID
         self.titular = titular
         self.fecha_apertura = fecha_apertura
@@ -48,20 +40,20 @@ class CuentaBancaria():
 
     #Método para retirar dinero
     def retirar_dinero(self, dinero):
-        if int(dinero) > CuentaBancaria.getsaldo():
+        if float(dinero) > CuentaBancaria.getsaldo():
             print('No hay suficiente dinero para retirar')
         else:
-            dinero_final = (CuentaBancaria.getsaldo()) - int(dinero)
+            dinero_final = (CuentaBancaria.getsaldo()) - float(dinero)
             CuentaBancaria.setsaldo(dinero_final)
 
     #Método para ingresar dinero
     def ingresar_dinero(self, dinero):
-        dinero_final = (CuentaBancaria.getsaldo()) + int(dinero)
+        dinero_final = (CuentaBancaria.getsaldo()) + float(dinero)
         CuentaBancaria.setsaldo(dinero_final)
 
     #Método para transferir dinero
     def transferir_dinero(self, dinero, cuenta):
-        if int(dinero) > CuentaBancaria.getsaldo():
+        if float(dinero) > CuentaBancaria.getsaldo():
             print('No hay suficiente saldo para transferir')
         else:
             CuentaBancaria.retirar_dinero(dinero)
