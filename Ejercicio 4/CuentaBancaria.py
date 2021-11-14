@@ -40,21 +40,21 @@ class CuentaBancaria():
 
     #Método para retirar dinero
     def retirar_dinero(self, dinero):
-        if float(dinero) > CuentaBancaria.getsaldo():
+        if float(dinero) > self.getsaldo():
             print('No hay suficiente dinero para retirar')
         else:
-            dinero_final = (CuentaBancaria.getsaldo()) - float(dinero)
-            CuentaBancaria.setsaldo(dinero_final)
+            dinero_final = (self.getsaldo()) - float(dinero)
+            self.setsaldo(dinero_final)
 
     #Método para ingresar dinero
     def ingresar_dinero(self, dinero):
-        dinero_final = (CuentaBancaria.getsaldo()) + float(dinero)
-        CuentaBancaria.setsaldo(dinero_final)
+        dinero_final = (self.getsaldo()) + float(dinero)
+        self.setsaldo(dinero_final)
 
     #Método para transferir dinero
     def transferir_dinero(self, dinero, cuenta):
-        if float(dinero) > CuentaBancaria.getsaldo():
+        if float(dinero) > self.getsaldo():
             print('No hay suficiente saldo para transferir')
         else:
-            CuentaBancaria.retirar_dinero(dinero)
+            self.retirar_dinero(dinero)
             cuenta.ingresar_dinero(dinero)

@@ -7,8 +7,8 @@ class CuentaVip(CuentaBancaria):
         super().__init__(ID, titular, fecha_apertura, numero_cuenta, saldo)
 
     def retirar_dinero(self, dinero):
-        if float(dinero) > CuentaBancaria.getsaldo() + self.saldo_negativo:
+        if float(dinero) > self.getsaldo() + self.saldo_negativo:
             print('No hay suficiente dinero para retirar')
         else:
-            dinero_final = (CuentaBancaria.getsaldo()) - float(dinero)
-            CuentaBancaria.setsaldo(dinero_final)
+            dinero_final = (self.getsaldo()) - float(dinero)
+            self.setsaldo(dinero_final)
