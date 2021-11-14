@@ -1,3 +1,4 @@
+from Nodo import Nodo
 class LinkedList:
 	def __init__(self):
 		#inicializo la cabecera nula
@@ -32,3 +33,19 @@ class LinkedList:
 			temp_node = temp_node.next
 
 		print('Null')
+
+#creamos un main para probarlo
+if __name__ == '__main__':
+    #instanciamos la Linked List
+    linked_list = LinkedList()
+
+    #insertamos datos en la lista
+    linked_list.insertar(Nodo(1))
+    linked_list.insertar(Nodo(2))
+    linked_list.insertar(Nodo(3))
+    linked_list.insertar(Nodo(4))
+    linked_list.insertar(Nodo(5))
+    linked_list.insertar(Nodo(6))
+    linked_list.insertar(Nodo(7))
+    ## printing the linked list
+    linked_list.mostrar()
