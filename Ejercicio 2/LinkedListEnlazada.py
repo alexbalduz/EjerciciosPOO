@@ -29,7 +29,7 @@ class LinkedList:
 		print()
 
 		#printamos la data en orden inverso
-		print("Reverse Order: ", end='')
+		print("Orden inverso: ", end='')
 
 		#cogemos el ultimo nodo
 		last_node = self.head
